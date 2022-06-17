@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------- head -----------------*/
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+  }
+
+  main{
+    position: relative;
+  }
+
+body{
+    background-color: var(--backgrond);
+    font-family: 'Manrope', sans-serif; 
+    overflow-x: hidden; 
+}
+
+header{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.menu{
+    padding-top: 3%;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  
+   
+}
+
+ul li{
+    display: inline-block;
+    padding: 20px;
+  
+}
+
+
+ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    
+}
+
+.img-bottom-left{
+    position: absolute;
+    bottom: 0;
+    top: 25%;
+    left: 0;
+}
+
+.img-top-right{
+    position: absolute;
+    right: 0;
+   
+}
+
+.btn-nav{
+    padding: 10px;
+    width: 160px;
+    border-radius: 9px;
+    padding: 10px;
+    background: none;
+    color: var(--text-color);
+    border: #8257E5 solid 1px;
+    cursor: pointer;
+   transition: 0.8s;
+   
+}
+
+.btn-nav:hover{
+    background-color: var(--button);
+}
+
+.btn-open{
+    display: none;
+}
+
+.btn-close{
+    display: none;
+}
+
+
+
+.logo-mobile{
+    display: none;
+}
+
+
+
+@media(max-width:890px){
+
+    .menu-links{
+        visibility: hidden;
+        transition: 0.1s;
+    }
+
+    .menu-links ul li{
+        visibility: hidden;
+    }
+
+    .menu-links.active ul li {
+        visibility: visible;
+        transition: 0.9s;
+    }
+
+    .menu-links.active ul li:hover{
+        background-color: var(--button);
+    }
+
+    .menu-links.active{
+       visibility: visible;
+      position: absolute;
+      width: 100%;
+      top:50px;
+      right: 0;
+      background-color:var(--backgrond);
+      text-align: left;
+      height: 100vh;
+      z-index: 1;
+      padding-top: 20px;
+    }
+
+    ul li{
+        display: block;
+        border-bottom: 0.2px  solid var(--border-menu-mobile);
+        border-top: 0.2px  solid var(--border-menu-mobile);
+        padding: 10px;
+        
+    }
+
+   
+
+   
+
+    .img-bottom-left{
+        display: none;
+    }
+    .img-top-right{
+        display: none;
+    }
+
+    .btn-nav{
+        display: none;
+    }
+
+    .btn-open{
+         display: block;
+     }
+
+     .btn-close{
+        display: block;
+     }
+
+     .logo-mobile{
+        display: block;
+     }
+
+     .logo-desktop{
+        display: none;
+     }
+
+     header{
+        border-bottom: rgb(83, 83, 83) 1px solid;
+     }
+
+    .menu{
+    padding-top: 3%;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    }
+
+}
+
+
+
+/* ---------------- Section one -------------*/
+
+
+
+.container{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.name-logo{
+    margin-bottom: -30px;
+}
+
+.text-white{
+    color: #FFF;
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.text-blue{
+    color: #000;
+    font-size: 79px;
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+
+.text-mobile{
+    color: white;
+    display: none;
+}
+
+.img-blur-mobile{
+    visibility: hidden;
+}
+
+.btn-nav-mobile{
+visibility: hidden;
+}
+
+.img-blur-mobile{
+    display: none;
+}
+
+@media(max-width:890px){
+
+    .container{
+        margin-top: 10%;
+    }
+
+    
+    .text-white, .text-blue{
+        font-size: 35px;
+        
+    }
+
+    .img-blur-mobile{
+        visibility: visible;
+        position: absolute;
+        height: 70vh;
+        bottom: -5%;
+        width: 100vw;
+      
+        
+    }
+
+    .img-coffe-desktop{
+        
+        height: 30vh;
+        margin-top:12%;
+        z-index: 1;
+    }
+
+    .text-mobile{
+        text-align: center;
+        font-weight: 700;
+        display: block;
+        font-size: 20px;
+        margin-bottom: 30%;
+        z-index: 1;
+    }
+
+    .btn-nav-mobile{
+        visibility: visible;
+        padding: 20px;
+        width: 170px;
+        border-radius: 9px;
+        padding: 10px;
+        background: none;
+        color: var(--text-color);
+        border: #8257E5 solid 1px;
+        cursor: pointer;
+        transition: 0.8s;
+        margin-bottom: 23%;
+        z-index: 1;
+    }
+
+    .btn-nav-mobile:hover{
+        background-color: var(--button);
+    }
+
+    .img-blur-mobile{
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+}
